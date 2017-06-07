@@ -1,0 +1,19 @@
+framework:
+    test: ~
+    form: ~
+    validation:      { enable_annotations: true }
+    translator: { fallbacks: ['en'] }
+    router:
+        resource: "%kernel.root_dir%/../../Resources/config/routing.yml"
+        strict_requirements: ~
+    secret: "BlouBlaBli"
+
+monolog:
+    handlers:
+        main:
+            type:   stream
+            path:   "%kernel.logs_dir%/%kernel.environment%.log"
+            level:  debug
+
+audience_hero_image_server:
+    host: "img.example.com"

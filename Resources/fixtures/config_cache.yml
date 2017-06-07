@@ -1,0 +1,13 @@
+imports:
+    - { resource: config.yml }
+
+doctrine_cache:
+    providers:
+        my_test_cache:
+            file_system:
+                extension: "doctrine"
+                directory: "%kernel.cache_dir%/image_server/"
+
+audience_hero_image_server:
+    host: "img.example.com"
+    cache: my_test_cache

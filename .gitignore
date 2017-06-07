@@ -1,0 +1,5 @@
+composer.lock
+/vendor/
+Tests/Controller/cache
+Tests/Controller/logs
+coverage.xml

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="audience_hero_image_server.server.default" class="AudienceHero\Bundle\ImageServerBundle\Server\Server" public="false">
+            <argument type="service" id="audience_hero_image_server.loader" />
+            <argument type="service" id="audience_hero_image_server.transformer.chain" />
+        </service>
+
+        <service id="audience_hero_image_server.server.cache" class="AudienceHero\Bundle\ImageServerBundle\Server\CacheServer" public="false">
+            <argument type="service" id="audience_hero_image_server.server.default" />
+            <argument />
+        </service>
+
+        <service id="audience_hero_image_server" alias="audience_hero_image_server.server.cache" />
+
+        <service id="audience_hero_image_server.loader" class="AudienceHero\Bundle\ImageServerBundle\Loader\StreamLoader" public="false">
+        </service>
+
+        <service id="audience_hero_image_server.twig_extension" class="AudienceHero\Bundle\ImageServerBundle\Twig\ImageServerTwigExtension">
+            <argument type="service" id="router" />
+            <tag name="twig.extension" />
+        </service>
+
+        <service id="audience_hero_image_server.transformer.chain" class="AudienceHero\Bundle\ImageServerBundle\Transformer\ChainTransformer" public="false">
+            <argument type="collection">
+                <argument type="service" id="audience_hero_image_server.transformer.image_resizer" />
+                <argument type="service" id="audience_hero_image_server.transformer.crop" />
+            </argument>
+        </service>
+
+        <service id="audience_hero_image_server.transformer.image_resizer" class="AudienceHero\Bundle\ImageServerBundle\Transformer\ImageResizerTransformer" public="false">
+        </service>
+
+        <service id="audience_hero_image_server.transformer.crop" class="AudienceHero\Bundle\ImageServerBundle\Transformer\CropTransformer" public="false">
+        </service>
+    </services>
+</container>

@@ -1,0 +1,21 @@
+audience_hero_img_show:
+    path: /
+    host: "{domain}"
+    methods: ["GET", "HEAD"]
+    defaults:
+        _controller: "AudienceHeroImageServerBundle:Img:show"
+        domain: "%audience_hero_image_server.routing.context.host%"
+    requirements:
+        domain: "%audience_hero_image_server.routing.context.host%"
+
+audience_hero_img_show_alt:
+    path: "/{size}/{crop}/{url}"
+    host: "{domain}"
+    methods: ["GET", "HEAD"]
+    defaults:
+        crop: "none"
+        _controller: "AudienceHeroImageServerBundle:Img:show"
+        domain: "%audience_hero_image_server.routing.context.host%"
+    requirements:
+        domain: "%audience_hero_image_server.routing.context.host%"
+

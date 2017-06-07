@@ -1,0 +1,34 @@
+{
+    "name": "audience-hero/image-server-bundle",
+    "description": "A very specific Image Server written for Symfony",
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-4": {
+            "AudienceHero\\Bundle\\ImageServerBundle\\": ""
+        }
+    },
+    "require": {
+        "php": "^7.1",
+        "symfony/framework-bundle": "^3.3",
+        "twig/twig": "^1.34 | ^2.4",
+        "imagine/imagine": "^0.7.1",
+        "doctrine/doctrine-cache-bundle": "^1.3",
+        "symfony/translation": "^3.3",
+        "symfony/validator": "^3.3",
+        "symfony/form": "^3.3"
+    },
+    "require-dev": {
+        "symfony/filesystem": "^3.3",
+        "phpunit/phpunit": "^6.2",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/yaml": "^3.3",
+        "symfony/browser-kit": "^3.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc Weistroff",
+            "email": "marc@weistroff.net"
+        }
+    ]
+}
