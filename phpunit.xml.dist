@@ -13,19 +13,12 @@
         </testsuite>
     </testsuites>
 
-    <php>
-        <ini name="error_reporting" value="-1" />
-    </php>
-
-    <logging>
-        <log type="junit" target="coverage.xml" />
-    </logging>
-
     <filter>
         <whitelist>
             <directory>.</directory>
             <exclude>
-                <directory>Tests</directory>
+                <directory>./vendor/</directory>
+                <directory>./Tests</directory>
             </exclude>
         </whitelist>
     </filter>
