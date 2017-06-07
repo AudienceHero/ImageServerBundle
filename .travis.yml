@@ -1,6 +1,9 @@
 language: php
 php: [7.1, nightly]
 
+before_install:
+    - pecl install imagick
+
 before_script:
     - composer selfupdate
     - composer require satooshi/php-coveralls ~1.0.0
