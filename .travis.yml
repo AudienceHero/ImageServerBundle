@@ -2,7 +2,7 @@ language: php
 php: [7.1, nightly]
 
 before_install:
-    - pecl install imagick
+    - printf "\n" | pecl install imagick
 
 before_script:
     - composer selfupdate
