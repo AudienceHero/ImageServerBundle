@@ -9,6 +9,7 @@
     },
     "require": {
         "php": "^7.1",
+        "ext-imagick": "*",
         "symfony/framework-bundle": "^3.3",
         "twig/twig": "^1.34 | ^2.4",
         "imagine/imagine": "^0.7.1",
