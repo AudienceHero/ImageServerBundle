@@ -24,10 +24,6 @@ class Server implements ServerInterface
 
     public function serve(array $r): Response
     {
-        $url = $r['url'];
-        $width = $r['width'];
-        $height = $r['height'];
-
         $image = $this->loader->load($r['url']);
         $r['content_type'] = $image->getImagick()->getImageMimeType();
 

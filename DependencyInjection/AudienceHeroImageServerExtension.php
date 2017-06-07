@@ -4,7 +4,6 @@ namespace AudienceHero\Bundle\ImageServerBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
-use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
@@ -30,9 +29,5 @@ class AudienceHeroImageServerExtension extends Extension
 
         $cache = $config['cache'];
         $container->setParameter('audience_hero_image_server.doctrine_cache', $config['cache']);
-        if (!$cache) {
-
-        } else {
-        }
     }
 }
