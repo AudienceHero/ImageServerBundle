@@ -1,6 +1,6 @@
 <?php
 
-namespace AudienceHero\Bundle\ImageServerBundle\Form;
+namespace AudienceHero\Bundle\ImageServerBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

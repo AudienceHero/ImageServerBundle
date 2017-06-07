@@ -3,7 +3,7 @@
 namespace AudienceHero\Bundle\ImageServerBundle\Controller;
 
 use AudienceHero\Bundle\ImageServerBundle\Domain\ImgRequest;
-use AudienceHero\Bundle\ImageServerBundle\Form\ImgRequestType;
+use AudienceHero\Bundle\ImageServerBundle\Form\Type\ImgRequestType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
