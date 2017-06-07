@@ -2,6 +2,10 @@
 
 A very simple and composable image server for Symfony applications.
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/02bcb096-c616-42f7-b39c-95c043f076e0/big.png)](https://insight.sensiolabs.com/projects/02bcb096-c616-42f7-b39c-95c043f076e0)
+[![Build Status](https://travis-ci.org/AudienceHero/ImageServerBundle.svg?branch=master)](https://travis-ci.org/AudienceHero/ImageServerBundle)
+[![Coverage Status](https://coveralls.io/repos/github/AudienceHero/ImageServerBundle/badge.svg?branch=master)](https://coveralls.io/github/AudienceHero/ImageServerBundle?branch=master)
+
 ## Installation
 
 ### Step 1: Download the Bundle
