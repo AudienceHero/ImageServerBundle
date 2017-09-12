@@ -15,5 +15,3 @@ monolog:
             path:   "%kernel.logs_dir%/%kernel.environment%.log"
             level:  debug
 
-audience_hero_image_server:
-    host: "img.example.com"

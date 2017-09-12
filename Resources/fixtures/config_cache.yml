@@ -9,5 +9,4 @@ doctrine_cache:
                 directory: "%kernel.cache_dir%/image_server/"
 
 audience_hero_image_server:
-    host: "img.example.com"
     cache: my_test_cache

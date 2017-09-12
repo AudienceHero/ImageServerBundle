@@ -28,7 +28,7 @@ class ServerTest extends TestCase
     public function testServe()
     {
         $response = $this->server->serve([
-            'url' => 'https://pbs.twimg.com/profile_images/842992378960986112/Yd1Z53jW.jpg',
+            'url' => 'http://lorempixel.com/288/290/',
             'width' => 240,
             'height' => 240,
         ]);
@@ -47,7 +47,7 @@ class ServerTest extends TestCase
     public function testServeAndCrop()
     {
         $response = $this->server->serve([
-            'url' => 'https://pbs.twimg.com/profile_banners/783214/1471929200/1500x500',
+            'url' => 'http://lorempixel.com/288/200/',
             'width' => 0,
             'height' => 100,
 
@@ -59,7 +59,7 @@ class ServerTest extends TestCase
         $this->assertGreaterThanOrEqual(144, $size->getWidth());
 
         $response = $this->server->serve([
-            'url' => 'https://pbs.twimg.com/profile_banners/783214/1471929200/1500x500',
+            'url' => 'http://lorempixel.com/288/200/',
             'width' => 0,
             'height' => 100,
             'crop' => 'square',
@@ -72,7 +72,7 @@ class ServerTest extends TestCase
         $this->assertSame(100, $size->getWidth());
 
         $response = $this->server->serve([
-            'url' => 'https://pbs.twimg.com/profile_banners/783214/1471929200/1500x500',
+            'url' => 'http://lorempixel.com/288/200/',
             'width' => 0,
             'height' => 100,
             'crop' => 'square-center',

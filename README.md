@@ -55,8 +55,6 @@ Add this to your `app/config/config.yml` file:
 ```yml
 # ...
 audience_hero_image_server:
-    # (Required) Put the hostname under which the image server will answer
-    host: img.example.com  
     # (Optional) The doctrine cache provider key (See DoctrineCacheBundle documentation)
     # cache: image_server  
 # ...
@@ -69,7 +67,7 @@ Add this to your `app/config/routing.yml` file:
 ```yml
 _audience_hero_image_server:
     resource: "@AudienceHeroImageServerBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /img
 # ...
 ```
 

@@ -25,7 +25,6 @@ class AudienceHeroImageServerExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        $container->setParameter('audience_hero_image_server.routing.context.host', $config['host']);
         $container->setParameter('audience_hero_image_server.doctrine_cache', $config['cache']);
     }
 }
